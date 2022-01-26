@@ -1,0 +1,27 @@
+{
+  "name": "wdio-intro",
+  "version": "1.0.0",
+  "description": "testprojekt um webdriverio kennenzulernen",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "wdio run wdio.conf.ts --spec ./test/specs/intro.ts"
+  },
+  "author": "christoph zabinski",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/local-runner": "^7.16.6",
+    "@wdio/mocha-framework": "^7.16.6",
+    "@wdio/selenium-standalone-service": "^7.16.6",
+    "@wdio/spec-reporter": "^7.16.4",
+    "chai": "^4.3.4",
+    "chai-webdriverio": "^1.0.0",
+    "local-runner": "^0.1.1-alpha",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "webdriverio": "^7.16.6"
+  },
+  "dependencies": {
+    "@wdio/cli": "^7.16.6"
+  }
+}
