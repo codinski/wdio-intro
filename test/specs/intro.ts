@@ -1,12 +1,8 @@
 
-import url from 'webdriverio/build/commands/browser/url';
-import landingPage from '../pageobjects/landing.page';
 import LandingPage from '../pageobjects/landing.page';
 import LoginPage from '../pageobjects/login.page';
 
 
-/* ---Variables--- */
-const baseUrl = "http://demowebshop.tricentis.com"
 
 /* Testdata */
 const customerEmail = "czabinski@byom.de"
@@ -16,13 +12,10 @@ const customerPassword = "tosca1234!"
 describe('The webshop is available for a basic purchase with an existing user account', () => {
    
     it('open tricentis webshop', async () => {
-        LandingPage.open(baseUrl)
+        LandingPage.open('/')
         expect(browser).toHaveUrlContaining('demowebshop.tricentis')
         expect(browser).toHaveTitleContaining('Demo Webshop')
-        
     });
-
-
 
    it('login to webshop', async () => {
        

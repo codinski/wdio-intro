@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "testprojekt um webdriverio kennenzulernen",
   "main": "index.js",
-
   "scripts": {
     "test": "wdio run wdio.conf.ts --spec ./test/specs/intro.ts"
   },
