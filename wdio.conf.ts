@@ -20,6 +20,7 @@ export const config: WebdriverIO.Config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
+    runner: 'local',
     specs: [
         './test/specs/**/*.ts'
     ],
@@ -54,7 +55,7 @@ export const config: WebdriverIO.Config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         browserName: 'chrome',
         acceptInsecureCerts: true
@@ -110,7 +111,7 @@ export const config: WebdriverIO.Config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -207,7 +208,7 @@ export const config: WebdriverIO.Config = {
     // beforeTest: function (test, context) {
     // },
      beforeTest: function () {
-         const chai = require('chao')
+         const chai = require('chai')
          const chaiWebdriver = require('chai-webdriverio').default
          chai.use(chaiWebdriver(browser))
 

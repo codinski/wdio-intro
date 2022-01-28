@@ -15,9 +15,11 @@
     "@wdio/spec-reporter": "^7.16.4",
     "chai": "^4.3.4",
     "chai-webdriverio": "^1.0.0",
+    "chromedriver": "^97.0.2",
     "local-runner": "^0.1.1-alpha",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
+    "wdio-chromedriver-service": "^7.2.6",
     "webdriverio": "^7.16.6"
   },
   "dependencies": {
